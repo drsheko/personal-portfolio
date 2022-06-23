@@ -2,6 +2,12 @@
 body{
     margin: 0;
     padding: 0;
+    width:100%;
+    min-height :100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
 }
 nav{
     top: 0;
@@ -17,22 +23,26 @@ nav{
 
 .about-section{
     width: 100%;
-    min-height: auto;
+    display: table;
     position: relative;
     margin: 0;
-    box-sizing: border-box;
+   
     
 }
 
 .header-svg-container{
-    display: block;
+    display: table-row;
     position: relative;
     width: 100%;
+    max-height: 100%;
     margin: 0;
+    z-index: -1;
+    
 }
 
 .polygon-about{
     margin: 0;
+    
     
 }
 .about-content{
@@ -41,9 +51,10 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: auto;
     max-width: 100%;
     min-height: 20%;
-    margin:-95% 5% 0 5% ;
+    margin:-45% 5% 0 5% ;
     gap: 0;
 }
 
@@ -57,10 +68,9 @@ nav{
 }
 
 .about-photo{
-    object-fit: cover;
     max-width: 100%;
-    max-height: 100%;
-    margin: 0;
+    display: block;
+    min-height: 100%;
 }
 
 .about-text{
@@ -72,10 +82,54 @@ nav{
     max-height: 15%;
     margin: 5% 0 ;
     padding: 2%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
     
+}
+.about-text > h3{
+    align-self: flex-start;
+}
+
+.about-text > p {
+    align-self: flex-end;
+}
+.about-icons{
+    display: flex;
+    flex-direction: row;
+    align-self:flex-end;
+}
+.about-icons >img {
+    width: 36px;
+    height: 36px;
+    color:red;
 }
 
 main{
     position: relative;
-    margin-top: 50px;
+    margin: 4%;
+    height: 400px;
+}
+
+footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+.footer-svg-container{
+    position: relative;
+    z-index: -1;
+}
+.footer-content{
+    z-index: 1;
+    margin-bottom: -50%;
+    padding:4%;
+}
+
+.address-footer , .phone-footer,.email-footer{
+    display:flex;
+    flex-direction: row;
+
 }
