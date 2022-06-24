@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -55,7 +57,12 @@ nav{
     max-width: 100%;
     min-height: 20%;
     margin:-45% 5% 0 5% ;
-    gap: 0;
+    gap:0;
+    animation: 3s gap 1 ;
+}
+@keyframes gap {
+    from {gap:30%}
+    to {gap:0}
 }
 
 .about-photo-container{
@@ -98,11 +105,19 @@ nav{
     display: flex;
     flex-direction: row;
     align-self:flex-end;
+    gap:5px;
 }
 .about-icons >img {
     width: 36px;
     height: 36px;
     color:red;
+    transition: transform 1s 0.25s;
+}
+.about-icons >img:hover{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transform: rotate(1turn);
 }
 
 main{
